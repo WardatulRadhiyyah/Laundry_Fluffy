@@ -107,19 +107,7 @@ namespace Laundry
             dateTimePicker1.Text = Convert.ToString(data.Tanggalpengambilan);
         }
 
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-            //Login keluar = new Login();
-            //keluar.Show();
-           // this.Hide();
-        //}
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-            //Menu back = new Menu();
-            //back.Show();
-            //this.Hide();
-        //}
+        
 
         private void button6_Click_1(object sender, EventArgs e)
         {
@@ -169,10 +157,7 @@ namespace Laundry
             {
                 SimpanData();
             }
-            //else if (mode == Mode.Edit)
-            //{
-                //EditData();
-            //}
+            
 
         }
 
