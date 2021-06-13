@@ -13,7 +13,7 @@ namespace Laundry
 {
     public partial class Form1 : Form
     {
-        Pesanan pelanggan;
+        Pesanan pesanan;
         public enum Mode { Insert, Edit }
         Mode mode;
         public Form1()
@@ -29,8 +29,10 @@ namespace Laundry
             {
                 using (var db = new PesananModel())
                 {
-                    pelanggan = new Pesanan
+                  
+                    pesanan = new Pesanan
                     {
+
                         Nama = tbnama.Text,
                         No_Hp = tbnohp.Text,
                         Berat_Cucian = Convert.ToInt32(tbberat.Text),
@@ -39,10 +41,12 @@ namespace Laundry
                         Harga_Total = Convert.ToDouble(tbhargatotal.Text),
                         Tanggal_Pemsanan = Convert.ToDateTime(dateTimePicker2.Text),
                         Tanggal_Pengambilan = Convert.ToDateTime(dateTimePicker1.Text)
+                        
                     };
-                    db.Pesanans.Add(pelanggan);
+                    db.Pesanans.Add(pesanan);
                     db.SaveChanges();
                     MessageBox.Show("Pesanan Disimpan");
+
                     tbnama.Clear();
                     tbnohp.Clear();
                     tbberat.Clear();
